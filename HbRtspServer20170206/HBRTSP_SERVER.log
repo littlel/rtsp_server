@@ -1,0 +1,1844 @@
+17-04-07 16:45:26 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 16:45:26 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 16:45:26 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 16:45:26 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 16:45:27 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 16:45:27 - 配置下载开始：17-04-07 16:45:27,873 [..\public\src\Server.cpp:1130]
+17-04-07 16:45:28 - 配置下载结束：17-04-07 16:45:28,637 [..\public\src\Server.cpp:1164]
+17-04-07 16:45:28 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 16:45:28 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 16:45:28 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 16:45:28 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:45:28 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:45:28 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:45:28 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:45:29 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 16:45:29 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 16:45:29 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 16:45:31 - 用户切换摄像机3010090开始,通道10001 [HBInterface.cpp:477]
+17-04-07 16:45:31 - SwitchCameraToStream: channel[10001],cameraid[3010090] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 16:45:31 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 16:45:31 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 16:45:31 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 16:45:31 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 16:45:31 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010090</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 16:45:32 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 16:45:32 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 16:45:32 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75047492</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010090</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 16:45:33 - 视频流类型：19, 播放url为：udp://239.0.253.100:2078 [HBInterface.cpp:493]
+17-04-07 16:45:33 - 用户切换摄像机3010090成功 [HBInterface.cpp:501]
+17-04-07 16:46:26 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 16:46:26 - 轮循本地解码信息表,摄像机编号：3010090PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 16:47:02 - 用户释放相机url 10001开始 [HBInterface.cpp:692]
+17-04-07 16:47:03 - ------删除本地解码数据 DeleteLocalDecodeChannel10001---3010090 [..\public\src\Server.cpp:2381]
+17-04-07 16:47:03 - 用户释放摄像机url 10001成功 [HBInterface.cpp:702]
+17-04-07 16:47:03 - 用户切换摄像机3010084开始,通道10002 [HBInterface.cpp:477]
+17-04-07 16:47:03 - SwitchCameraToStream: channel[10002],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 16:47:03 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 16:47:03 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 16:47:03 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 16:47:03 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 16:47:03 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 16:47:04 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 16:47:04 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 16:47:04 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75047568</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 16:47:05 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 16:47:05 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 16:47:27 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 16:47:27 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 16:48:27 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 16:48:27 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 16:49:27 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 16:49:27 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 16:50:24 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 16:50:25 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 16:50:25 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 16:50:25 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 16:50:26 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 16:50:26 - 配置下载开始：17-04-07 16:50:26,578 [..\public\src\Server.cpp:1130]
+17-04-07 16:50:26 - 配置下载结束：17-04-07 16:50:26,939 [..\public\src\Server.cpp:1164]
+17-04-07 16:50:26 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 16:50:27 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 16:50:27 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 16:50:27 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:50:27 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:50:27 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:50:27 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:50:27 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 16:50:27 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 16:50:27 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 16:50:42 - 用户切换摄像机3080064开始,通道10001 [HBInterface.cpp:477]
+17-04-07 16:50:42 - SwitchCameraToStream: channel[10001],cameraid[3080064] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 16:50:42 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 16:50:42 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 16:50:42 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 16:50:42 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 16:50:42 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3080064</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 16:50:43 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 16:50:43 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 16:50:43 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75047672</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3080064</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 16:50:44 - 视频流类型：19, 播放url为：udp://239.0.253.100:2654 [HBInterface.cpp:493]
+17-04-07 16:50:44 - 用户切换摄像机3080064成功 [HBInterface.cpp:501]
+17-04-07 16:51:36 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 16:51:36 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 16:51:36 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 16:51:36 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 16:51:37 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 16:51:38 - 配置下载开始：17-04-07 16:51:38,024 [..\public\src\Server.cpp:1130]
+17-04-07 16:51:38 - 配置下载结束：17-04-07 16:51:38,494 [..\public\src\Server.cpp:1164]
+17-04-07 16:51:38 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 16:51:38 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 16:51:38 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 16:51:38 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:51:38 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:51:38 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:51:38 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 16:51:38 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 16:51:39 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 16:51:39 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 16:51:47 - 用户切换摄像机3080064开始,通道10001 [HBInterface.cpp:477]
+17-04-07 16:51:47 - SwitchCameraToStream: channel[10001],cameraid[3080064] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 16:51:47 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 16:51:47 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 16:51:47 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 16:51:47 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 16:51:47 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3080064</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 16:51:48 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 16:51:48 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 16:51:48 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75047696</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3080064</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 16:51:48 - 视频流类型：19, 播放url为：udp://239.0.253.100:2654 [HBInterface.cpp:493]
+17-04-07 16:51:48 - 用户切换摄像机3080064成功 [HBInterface.cpp:501]
+17-04-07 17:02:28 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 17:02:28 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 17:02:28 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 17:02:28 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 17:02:30 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 17:02:30 - 配置下载开始：17-04-07 17:02:30,082 [..\public\src\Server.cpp:1130]
+17-04-07 17:02:30 - 配置下载结束：17-04-07 17:02:30,377 [..\public\src\Server.cpp:1164]
+17-04-07 17:02:30 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 17:02:30 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 17:02:30 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 17:02:30 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:02:30 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:02:30 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:02:30 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:02:30 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 17:02:30 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 17:02:31 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 17:02:52 - 用户切换摄像机3080064开始,通道10001 [HBInterface.cpp:477]
+17-04-07 17:02:52 - SwitchCameraToStream: channel[10001],cameraid[3080064] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 17:02:52 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 17:02:52 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 17:02:52 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 17:02:52 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 17:02:53 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3080064</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 17:02:53 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 17:02:53 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 17:02:53 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75048244</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3080064</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 17:02:54 - 视频流类型：19, 播放url为：udp://239.0.253.100:2654 [HBInterface.cpp:493]
+17-04-07 17:02:54 - 用户切换摄像机3080064成功 [HBInterface.cpp:501]
+17-04-07 17:04:24 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 17:04:24 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 17:04:24 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 17:04:24 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 17:04:25 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 17:04:25 - 配置下载开始：17-04-07 17:04:25,855 [..\public\src\Server.cpp:1130]
+17-04-07 17:04:26 - 配置下载结束：17-04-07 17:04:26,165 [..\public\src\Server.cpp:1164]
+17-04-07 17:04:26 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 17:04:26 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 17:04:26 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 17:04:26 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:04:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:04:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:04:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:04:26 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 17:04:26 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 17:04:26 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 17:04:44 - 用户切换摄像机3080064开始,通道10001 [HBInterface.cpp:477]
+17-04-07 17:04:44 - SwitchCameraToStream: channel[10001],cameraid[3080064] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 17:04:44 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 17:04:44 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 17:04:44 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 17:04:44 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 17:04:44 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3080064</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 17:04:45 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 17:04:45 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 17:04:45 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75048361</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3080064</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 17:04:45 - 视频流类型：19, 播放url为：udp://239.0.253.100:2654 [HBInterface.cpp:493]
+17-04-07 17:04:45 - 用户切换摄像机3080064成功 [HBInterface.cpp:501]
+17-04-07 17:05:24 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 17:05:24 - 轮循本地解码信息表,摄像机编号：3080064PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 17:05:52 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 17:05:52 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 17:05:53 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 17:05:53 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 17:05:54 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 17:05:54 - 配置下载开始：17-04-07 17:05:54,247 [..\public\src\Server.cpp:1130]
+17-04-07 17:05:54 - 配置下载结束：17-04-07 17:05:54,589 [..\public\src\Server.cpp:1164]
+17-04-07 17:05:54 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 17:05:54 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 17:05:54 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 17:05:54 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:05:54 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:05:54 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:05:54 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:05:55 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 17:05:55 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 17:05:55 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 17:06:29 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 17:06:29 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 17:06:29 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 17:06:29 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 17:06:29 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 17:06:29 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 17:06:29 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 17:06:30 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 17:06:30 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 17:06:30 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75048437</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 17:06:30 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 17:06:30 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 17:06:53 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 17:06:53 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 17:25:43 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 17:25:43 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 17:25:43 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 17:25:43 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 17:25:44 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 17:25:45 - 配置下载开始：17-04-07 17:25:45,003 [..\public\src\Server.cpp:1130]
+17-04-07 17:25:45 - 配置下载结束：17-04-07 17:25:45,620 [..\public\src\Server.cpp:1164]
+17-04-07 17:25:45 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 17:25:45 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 17:25:45 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 17:25:45 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:25:45 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:25:45 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:25:45 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:25:45 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 17:25:46 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 17:25:46 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 17:25:56 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 17:25:56 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 17:25:56 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 17:25:56 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 17:25:56 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 17:25:56 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 17:25:56 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 17:25:56 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 17:25:56 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 17:25:56 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75049226</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 17:25:57 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 17:25:57 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 17:26:43 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 17:26:43 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 17:26:54 - 用户释放相机url 10001开始 [HBInterface.cpp:692]
+17-04-07 17:26:55 - ------删除本地解码数据 DeleteLocalDecodeChannel10001---3010084 [..\public\src\Server.cpp:2381]
+17-04-07 17:26:55 - 用户释放摄像机url 10001成功 [HBInterface.cpp:702]
+17-04-07 17:59:30 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 17:59:30 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 17:59:31 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 17:59:31 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 17:59:32 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 17:59:32 - 配置下载开始：17-04-07 17:59:32,471 [..\public\src\Server.cpp:1130]
+17-04-07 17:59:32 - 配置下载结束：17-04-07 17:59:32,802 [..\public\src\Server.cpp:1164]
+17-04-07 17:59:32 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 17:59:32 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 17:59:32 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 17:59:33 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:59:33 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:59:33 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:59:33 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 17:59:33 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 17:59:33 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 17:59:33 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 17:59:39 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 17:59:39 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 17:59:39 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 17:59:39 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 17:59:39 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 17:59:39 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 17:59:39 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 17:59:40 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 17:59:40 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 17:59:40 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75050361</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 17:59:40 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 17:59:40 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:00:20 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:00:20 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:00:20 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:00:20 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:00:21 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:00:21 - 配置下载开始：17-04-07 18:00:21,802 [..\public\src\Server.cpp:1130]
+17-04-07 18:00:22 - 配置下载结束：17-04-07 18:00:22,085 [..\public\src\Server.cpp:1164]
+17-04-07 18:00:22 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:00:22 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:00:22 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:00:22 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:00:22 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:00:22 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:00:22 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:00:22 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:00:22 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:00:22 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:00:26 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:00:26 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:00:26 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:00:26 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:00:26 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:00:26 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:00:26 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:00:27 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:00:27 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:00:27 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75050394</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:00:27 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:00:27 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:08:24 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:08:24 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:08:24 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:08:24 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:08:25 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:08:25 - 配置下载开始：17-04-07 18:08:25,838 [..\public\src\Server.cpp:1130]
+17-04-07 18:08:26 - 配置下载结束：17-04-07 18:08:26,157 [..\public\src\Server.cpp:1164]
+17-04-07 18:08:26 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:08:26 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:08:26 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:08:26 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:08:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:08:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:08:26 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:08:26 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:08:26 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:08:26 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:08:32 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:08:32 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:08:32 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:08:32 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:08:32 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:08:32 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:08:32 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:08:33 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:08:33 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:08:33 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75050660</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:08:33 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:08:33 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:09:24 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:09:24 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:09:48 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:09:48 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:09:49 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:09:49 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:09:50 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:09:50 - 配置下载开始：17-04-07 18:09:50,427 [..\public\src\Server.cpp:1130]
+17-04-07 18:09:51 - 配置下载结束：17-04-07 18:09:51,001 [..\public\src\Server.cpp:1164]
+17-04-07 18:09:51 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:09:51 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:09:51 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:09:51 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:09:51 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:09:51 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:09:51 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:09:51 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:09:51 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:09:51 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:10:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:11:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:12:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:13:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:14:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:15:49 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:16:06 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:16:06 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:16:07 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:16:07 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:16:08 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:16:08 - 配置下载开始：17-04-07 18:16:08,866 [..\public\src\Server.cpp:1130]
+17-04-07 18:16:09 - 配置下载结束：17-04-07 18:16:09,227 [..\public\src\Server.cpp:1164]
+17-04-07 18:16:09 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:16:09 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:16:09 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:16:09 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:16:09 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:16:09 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:16:09 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:16:09 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:16:09 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:16:09 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:16:27 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:16:27 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:16:27 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:16:27 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:16:27 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:16:27 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:16:27 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:16:27 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:16:27 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:16:27 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75050931</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:16:28 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:16:28 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:17:07 - 用户释放相机url 10001开始 [HBInterface.cpp:692]
+17-04-07 18:17:07 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:17:07 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:17:08 - ------删除本地解码数据 DeleteLocalDecodeChannel10001---3010084 [..\public\src\Server.cpp:2381]
+17-04-07 18:17:08 - 用户释放摄像机url 10001成功 [HBInterface.cpp:702]
+17-04-07 18:17:31 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:17:31 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:17:32 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:17:32 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:17:33 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:17:33 - 配置下载开始：17-04-07 18:17:33,455 [..\public\src\Server.cpp:1130]
+17-04-07 18:17:34 - 配置下载结束：17-04-07 18:17:34,063 [..\public\src\Server.cpp:1164]
+17-04-07 18:17:34 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:17:34 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:17:34 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:17:34 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:17:34 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:17:34 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:17:34 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:17:34 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:17:34 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:17:34 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:17:43 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:17:43 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:17:43 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:17:43 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:17:43 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:17:43 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:17:43 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:17:43 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:17:43 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:17:43 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75050978</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:17:44 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:17:44 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:18:32 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:18:32 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:19:57 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:19:57 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:19:57 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:19:57 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:19:59 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:19:59 - 配置下载开始：17-04-07 18:19:59,138 [..\public\src\Server.cpp:1130]
+17-04-07 18:19:59 - 配置下载结束：17-04-07 18:19:59,852 [..\public\src\Server.cpp:1164]
+17-04-07 18:19:59 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:20:00 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:20:00 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:20:00 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:20:00 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:20:00 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:20:00 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:20:00 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:20:00 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:20:00 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:20:11 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:20:11 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:20:11 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:20:11 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:20:11 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:20:11 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:20:11 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:20:11 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:20:11 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:20:11 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75051059</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:20:12 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:20:12 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:20:57 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:20:57 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:21:58 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:21:58 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:24:30 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:24:30 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:24:31 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:24:31 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:24:32 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:24:32 - 配置下载开始：17-04-07 18:24:32,370 [..\public\src\Server.cpp:1130]
+17-04-07 18:24:32 - 配置下载结束：17-04-07 18:24:32,686 [..\public\src\Server.cpp:1164]
+17-04-07 18:24:32 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:24:32 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:24:32 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:24:32 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:24:32 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:24:32 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:24:32 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:24:33 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:24:33 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:24:33 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:24:38 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:24:38 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:24:38 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:24:38 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:24:38 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:24:38 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:24:38 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:24:39 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:24:39 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:24:39 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75051194</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:24:39 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:24:39 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:27:58 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:27:58 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:27:59 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:27:59 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:28:00 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:28:00 - 配置下载开始：17-04-07 18:28:00,715 [..\public\src\Server.cpp:1130]
+17-04-07 18:28:01 - 配置下载结束：17-04-07 18:28:01,380 [..\public\src\Server.cpp:1164]
+17-04-07 18:28:01 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:28:01 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:28:01 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:28:01 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:28:01 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:28:01 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:28:01 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:28:01 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:28:02 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:28:02 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:28:07 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:28:07 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:28:07 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:28:07 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:28:07 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:28:07 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:28:07 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:28:07 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:28:07 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:28:07 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75051312</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:28:08 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:28:08 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:28:26 - 用户释放相机url 10001开始 [HBInterface.cpp:692]
+17-04-07 18:28:26 - ------删除本地解码数据 DeleteLocalDecodeChannel10001---3010084 [..\public\src\Server.cpp:2381]
+17-04-07 18:28:26 - 用户释放摄像机url 10001成功 [HBInterface.cpp:702]
+17-04-07 18:28:40 - 用户切换摄像机3010084开始,通道10002 [HBInterface.cpp:477]
+17-04-07 18:28:40 - SwitchCameraToStream: channel[10002],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:28:40 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:28:40 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:28:40 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:28:40 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:28:40 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:28:41 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:28:41 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:28:41 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75051329</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:28:41 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:28:41 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:28:59 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:28:59 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:29:59 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:29:59 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:30:59 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:30:59 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:32:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:32:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:33:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:33:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:34:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:34:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:35:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:35:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:36:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:36:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:37:00 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:37:00 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:39:09 - HBSDK初始化...... [HBInterface.cpp:144]
+17-04-07 18:39:09 - 用户admin开始登录 [HBInterface.cpp:188]
+17-04-07 18:39:10 - http://10.49.128.68:8080/PeiZhi/services/IPzService [..\public\src\LiveAndBasic.cpp:268]
+17-04-07 18:39:10 - 用户admin登录成功 [HBInterface.cpp:227]
+17-04-07 18:39:11 - 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1113]
+17-04-07 18:39:11 - 配置下载开始：17-04-07 18:39:11,784 [..\public\src\Server.cpp:1130]
+17-04-07 18:39:12 - 配置下载结束：17-04-07 18:39:12,107 [..\public\src\Server.cpp:1164]
+17-04-07 18:39:12 - 接收报文信息为：<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<sys_usermanger>
+<record id='1'>
+<yhzh>admin</yhzh>
+<sfjq>1</sfjq>
+</record>
+</sys_usermanger>
+<SYS_SERVER>
+<RECORD>
+<ip>10.49.128.58</ip>
+<port>7399</port>
+<s_id>183</s_id>
+<zdz>ywzx</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.128.68</ip>
+<port>8080</port>
+<s_id>103</s_id>
+<zdz>jqz</zdz>
+</RECORD>
+<RECORD>
+<ip>10.49.230.95</ip>
+<port>8088</port>
+<s_id>123</s_id>
+<zdz>wg</zdz>
+</RECORD>
+</SYS_SERVER>
+</body>
+</root>
+ [..\public\src\Server.cpp:1167]
+17-04-07 18:39:12 - common表格已为最新,无须alter.SQLITE_ERROR[1]: duplicate column name: UUID [..\public\src\Server.cpp:2122]
+17-04-07 18:39:12 - common表格 alter add 完成 [..\public\src\Server.cpp:2124]
+17-04-07 18:39:12 - INSERT INTO TMP_sys_usermanger (yhzh, sfjq ) VALUES ( 'admin', '1' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:39:12 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.58', '7399', '183', 'ywzx' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:39:12 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.128.68', '8080', '103', 'jqz' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:39:12 - INSERT INTO TMP_SYS_SERVER (ip, port, s_id, zdz ) VALUES ( '10.49.230.95', '8088', '123', 'wg' ); [..\public\src\Server.cpp:2201]
+17-04-07 18:39:12 - 下载配置信息成功。 [..\public\src\Server.cpp:2262]
+17-04-07 18:39:12 - 同步7台摄像机。 [..\public\src\Server.cpp:1879]
+17-04-07 18:39:12 - 配置下载线程结束。 [..\public\src\Server.cpp:1218]
+17-04-07 18:39:17 - 用户切换摄像机3010084开始,通道10001 [HBInterface.cpp:477]
+17-04-07 18:39:17 - SwitchCameraToStream: channel[10001],cameraid[3010084] [..\public\src\LiveAndBasic.cpp:518]
+17-04-07 18:39:17 - 需要鉴权，调用鉴权接口 [..\public\src\LiveAndBasic.cpp:734]
+17-04-07 18:39:17 - http://10.49.128.68:8080/JianQuan/services/JqService [..\public\src\Server.cpp:2414]
+17-04-07 18:39:17 - g_JianQuanType = 0 [..\public\src\Server.cpp:2444]
+17-04-07 18:39:17 - 使用视频监控鉴权 [..\public\src\Server.cpp:2447]
+17-04-07 18:39:17 - 调用客户端请求鉴权开始,发送报文为：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+        <ucActionType>switch</ucActionType>
+        <ulCameraNumber>3010084</ulCameraNumber>
+    </QueryCondition>
+</root>
+ [..\public\src\Server.cpp:1431]
+17-04-07 18:39:18 - 调用客户端请求鉴权结束 [..\public\src\Server.cpp:1434]
+17-04-07 18:39:18 - 客户端请求鉴权结束 [..\public\src\Server.cpp:1474]
+17-04-07 18:39:18 - 鉴权接收报文信息为：
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<head>
+<message>success</message>
+</head>
+<body>
+<JianQuan>
+<ulActionID>75051704</ulActionID>
+<szUser>admin</szUser>
+<ulCameraNumber>3010084</ulCameraNumber>
+<ucActionType>switch</ucActionType>
+<ucAuthority>10</ucAuthority>
+<ucAuthorityShelfLife>30</ucAuthorityShelfLife>
+<szOwnerUnitIP>10.49.230.198</szOwnerUnitIP>
+<ulOwnerUnitPort>6000</ulOwnerUnitPort>
+<szOwnerUnitProxyIP></szOwnerUnitProxyIP>
+<ulOwnerUnitProxyPort></ulOwnerUnitProxyPort>
+</JianQuan>
+</body>
+</root>
+ [..\public\src\Server.cpp:1477]
+17-04-07 18:39:18 - 视频流类型：19, 播放url为：udp://239.0.253.100:2072 [HBInterface.cpp:493]
+17-04-07 18:39:18 - 用户切换摄像机3010084成功 [HBInterface.cpp:501]
+17-04-07 18:40:10 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:40:10 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:41:10 - 轮循本地解码信息表LOCAL_DECODECHANNEL [..\public\src\Server.cpp:3815]
+17-04-07 18:41:10 - 轮循本地解码信息表,摄像机编号：3010084PlayType0 [..\public\src\Server.cpp:3924]
+17-04-07 18:41:47 - 用户释放相机url 10001开始 [HBInterface.cpp:692]
+17-04-07 18:41:47 - ------删除本地解码数据 DeleteLocalDecodeChannel10001---3010084 [..\public\src\Server.cpp:2381]
+17-04-07 18:41:47 - 用户释放摄像机url 10001成功 [HBInterface.cpp:702]

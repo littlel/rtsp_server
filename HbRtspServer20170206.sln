@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+VisualStudioVersion = 10.0.40219.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HbRtspServer20170206", "HbRtspServer20170206\HbRtspServer20170206.vcxproj", "{08F3D835-39D4-4F0B-836B-E25B19BE144F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08F3D835-39D4-4F0B-836B-E25B19BE144F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08F3D835-39D4-4F0B-836B-E25B19BE144F}.Debug|Win32.Build.0 = Debug|Win32
+		{08F3D835-39D4-4F0B-836B-E25B19BE144F}.Release|Win32.ActiveCfg = Release|Win32
+		{08F3D835-39D4-4F0B-836B-E25B19BE144F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

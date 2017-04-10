@@ -1,0 +1,14 @@
+17-04-07 09:07:49 HBSDK初始化...... 
+17-04-07 09:07:49 用户admin开始登录 
+17-04-07 09:07:51 http://192.168.3.191:8090/PeiZhi/services/IPzService 
+17-04-07 09:07:51 用户admin登录成功 
+17-04-07 09:07:51 请求具体报文内容：<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <QueryCondition>
+        <szUser>admin</szUser>
+        <szPass>Haibo2013</szPass>
+        <szUserType>0</szUserType>
+    </QueryCondition>
+</root>
+ 
+17-04-07 09:07:51 配置下载开始：17-04-07 09:07:51,609 
